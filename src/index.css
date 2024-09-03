@@ -1,0 +1,128 @@
+/* General reset for body and html to avoid unexpected margins */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Hide scroll bars on body */
+  background: rgb(0, 0, 0);
+}
+
+/* Style for the section inside the header */
+header section {
+  background-color: transparent; /* Colorless background */
+  padding: 0;
+  position: relative;
+}
+
+/* Style for the menu */
+menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header section div img {
+  width: 90px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute; /* Position relative to the nearest positioned ancestor */
+  bottom: 0px;
+}
+
+
+/* Style for buttons */
+button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin: 0 10px;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for buttons with links */
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hover effect for buttons */
+button:hover::before,
+button:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgb(89, 244, 5);
+  transition: opacity 0.3s ease;
+}
+
+button:hover::before {
+  top: -5px;
+}
+
+button:hover::after {
+  bottom: -5px;
+}
+
+/* Hide buttons on small screens */
+@media (max-width: 768px) {
+  button {
+      display: none;
+  }
+}
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(to right, #046004, #40a640);
+  background-size: cover; /* Cover the entire container */
+  overflow: auto; /* Allow scrolling of content inside */
+}
+
+/* Style for sections */
+section {
+  position: relative;
+  padding: 50px;
+  color: rgb(0, 247, 255); /* Adjust text color as needed */
+  font-size: xx-large;
+}
+
+/* Additional styling for sections */
+section p, section a, section li, section button {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Styles for the button container */
+.button-container {
+  display: flex;              /* Use Flexbox for alignment */
+  justify-content: flex-end; /* Align items to the end (right side) */
+  align-items: center;        /* Center items vertically within the container */
+  padding: 20px;              /* Add padding around the container */
+  position: absolute;         /* Position container absolutely */
+  right: 0;                   /* Align container to the right side of the page */
+  top: 20px;                  /* Adjust top position from the top of the page */
+}
+
+/* Styles for the buttons */
+.button-container button {
+  background-color: transparent;  /* Blue background for buttons */
+  color: white;               /* White text color */
+  border: none;               /* Remove default border */
+  padding: 10px 20px;         /* Padding inside the buttons */
+  margin-left: 10px;          /* Space between buttons (use margin-left for horizontal alignment) */
+  cursor: pointer;            /* Change cursor to pointer on hover */
+  border-radius: 5px;         /* Rounded corners for buttons */
+  font-size: 16px;            /* Font size for button text */
+}
+
